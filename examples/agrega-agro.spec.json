@@ -2,7 +2,11 @@
   "conceptId": "agro-digital-fortalece-relacao",
   "format": "carousel",
   "title": "No agro, o digital não substitui a relação",
-  "valueAxis": ["inform", "prove", "entertain"],
+  "valueAxis": [
+    "inform",
+    "prove",
+    "entertain"
+  ],
   "designTokens": {
     "palette": {
       "bg": "#14342B",
@@ -11,9 +15,17 @@
       "muted": "#9FB0A2",
       "surface": "#1F5C3D"
     },
-    "fonts": { "display": "Fraunces", "body": "Inter" },
+    "fonts": {
+      "display": "Fraunces",
+      "body": "Inter"
+    },
     "radius": 0,
-    "mood": ["editorial", "autoral", "premium B2B", "terra-e-verde"]
+    "mood": [
+      "editorial",
+      "autoral",
+      "premium B2B",
+      "terra-e-verde"
+    ]
   },
   "slides": [
     {
@@ -26,10 +38,14 @@
       },
       "image": {
         "role": "background",
-        "prompt": "editorial still-life, a single green seedling sprouting from a furrow of dark soil that turns into faint circuit-board lines, deep forest green backdrop, warm amber rim light, premium agribusiness mood",
+        "prompt": "Bright editorial photograph: a fresh soybean seedling sprouting from red-brown Cerrado soil (latossolo vermelho) in soft Brazilian morning sunlight, a vast out-of-focus soybean plantation behind, Mato Grosso do Sul / western Bahia agribusiness, luminous optimistic, shallow depth of field, high-key.",
         "negativePrompt": "text, words, letters, logos, watermark, ui",
-        "style": "Stripe Press / Monocle editorial product styling",
-        "palette": ["#14342B", "#D98C3F", "#1F5C3D"],
+        "style": "authentic Brazilian agro editorial photograph",
+        "palette": [
+          "#14342B",
+          "#D98C3F",
+          "#1F5C3D"
+        ],
         "aspectRatio": "4:5"
       }
     },
@@ -42,10 +58,14 @@
       },
       "image": {
         "role": "background",
-        "prompt": "a warm handshake between two farmers slowly dissolving into pixels at the edges, golden hour field, deep green tones, editorial cinematic",
+        "prompt": "Bright candid editorial photograph, full frame edge to edge: two authentic Brazilian farmers of mixed ethnicity (pardo/caboclo), sun-weathered faces, caps and simple work shirts typical of the Cerrado, shaking hands and smiling in a vast green soybean field in Mato Grosso do Sul, warm Brazilian morning daylight, optimistic and human.",
         "negativePrompt": "text, words, letters, logos, watermark",
-        "style": "cinematic editorial photograph",
-        "palette": ["#14342B", "#D98C3F", "#1F5C3D"],
+        "style": "authentic Brazilian agro editorial photograph",
+        "palette": [
+          "#14342B",
+          "#D98C3F",
+          "#1F5C3D"
+        ],
         "aspectRatio": "4:5"
       }
     },
@@ -58,10 +78,14 @@
       },
       "image": {
         "role": "background",
-        "prompt": "a tractor and a smartphone casting a single shared shadow over a soy field at golden hour, deep green editorial, minimal",
+        "prompt": "Bright editorial photograph: a large modern green soybean harvester (colheitadeira) working a vast Brazilian Cerrado soybean field at golden morning light, center-pivot irrigation circles and the scale of MATOPIBA / western Bahia agriculture in the distance, a smartphone resting on a wooden fence post in the foreground.",
         "negativePrompt": "text, words, letters, logos, watermark",
-        "style": "editorial cinematic photograph",
-        "palette": ["#14342B", "#D98C3F", "#1F5C3D"],
+        "style": "authentic Brazilian agro editorial photograph",
+        "palette": [
+          "#14342B",
+          "#D98C3F",
+          "#1F5C3D"
+        ],
         "aspectRatio": "4:5"
       }
     },
@@ -76,10 +100,14 @@
       },
       "image": {
         "role": "background",
-        "prompt": "a stylized map of Brazil drawn with delivery routes and small grain-sack nodes glowing, deep forest green background, amber route lines, editorial infographic still-life",
+        "prompt": "Bright clean editorial infographic: a stylized map of Brazil in luminous fresh green relief with soft golden delivery routes connecting small glowing nodes across the territory, airy light-green background, premium minimal data-viz.",
         "negativePrompt": "text, words, letters, country labels, logos, watermark",
-        "style": "Monocle data-as-object editorial",
-        "palette": ["#14342B", "#D98C3F", "#1F5C3D"],
+        "style": "authentic Brazilian agro editorial photograph",
+        "palette": [
+          "#14342B",
+          "#D98C3F",
+          "#1F5C3D"
+        ],
         "aspectRatio": "4:5"
       }
     },
@@ -92,10 +120,14 @@
       },
       "image": {
         "role": "background",
-        "prompt": "an open hand holding dark fertile soil with one small glowing node of light in it, deep green editorial still-life, warm amber highlight",
+        "prompt": "Bright editorial macro photograph: the weathered hands of a Brazilian Cerrado farmer holding red-brown fertile soil with small green soybean sprouts, soft luminous Brazilian daylight, authentic and hopeful, high-key.",
         "negativePrompt": "text, words, letters, logos, watermark",
-        "style": "editorial macro still-life",
-        "palette": ["#14342B", "#D98C3F", "#1F5C3D"],
+        "style": "authentic Brazilian agro editorial photograph",
+        "palette": [
+          "#14342B",
+          "#D98C3F",
+          "#1F5C3D"
+        ],
         "aspectRatio": "4:5"
       }
     },
@@ -109,10 +141,14 @@
       },
       "image": {
         "role": "background",
-        "prompt": "two dirt roads merging into one through a green soy field seen from above, golden hour, deep green editorial, minimal",
+        "prompt": "Bright aerial editorial photograph: a vast Brazilian Cerrado soybean farm in Mato Grosso do Sul with red dirt roads converging into one and green center-pivot irrigation circles, a pair of blue-and-yellow macaws (arara-caninde) flying over the fields, golden morning light, open optimistic.",
         "negativePrompt": "text, words, letters, logos, watermark",
-        "style": "aerial editorial photograph",
-        "palette": ["#14342B", "#D98C3F", "#1F5C3D"],
+        "style": "authentic Brazilian agro editorial photograph",
+        "palette": [
+          "#14342B",
+          "#D98C3F",
+          "#1F5C3D"
+        ],
         "aspectRatio": "4:5"
       }
     }
@@ -121,7 +157,15 @@
     "instagram": "No agro, o digital não substitui relações — fortalece.\n\nA gente opera o e-commerce da sua revenda ou cooperativa de ponta a ponta — com receituário agronômico, RT e controle de crédito resolvidos na loja — e plugga na logística Luft Agro: 14 filiais estratégicas entregando no Brasil inteiro, com 50 anos de DNA Luft por trás.\n\nVocê vende mais insumo, atende o produtor distante e protege o canal — sem virar empresa de tecnologia e logística.\n\nA pergunta não é se o agro vai vender online. É quem vai operar isso por você. Agende uma reunião — link na bio.",
     "linkedin": "A objeção número 1 da revenda de insumos sobre e-commerce é \"meu produtor não compra sem o agrônomo do lado\". Correto — e é exatamente por isso que digital no agro é MEIO, não fim. A loja digital existe para organizar a venda e armar o time comercial, não para substituí-lo. Some isso à logística Luft Agro (14 filiais, entrega nacional) e a revenda escala sem virar empresa de tecnologia. O canal não morre no digital; ele se fortalece — se for operado por quem entende o agro."
   },
-  "hashtags": ["#agro", "#agronegocio", "#insumos", "#fullcommerce", "#revenda", "#cooperativa", "#LuftAgro"],
+  "hashtags": [
+    "#agro",
+    "#agronegocio",
+    "#insumos",
+    "#fullcommerce",
+    "#revenda",
+    "#cooperativa",
+    "#LuftAgro"
+  ],
   "cta": {
     "label": "Agende uma reunião",
     "meta": "agro.agrega.com.br · link na bio",

@@ -1,0 +1,36 @@
+{
+  "name": "postcraft",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Turn a company's full public footprint (site, news, social, brand) into ICP-targeted visual posts — carousels + images — grounded in global references and local competitors.",
+  "bin": {
+    "postcraft": "bin/postcraft.ts"
+  },
+  "scripts": {
+    "cli": "tsx bin/postcraft.ts",
+    "demo": "tsx examples/run-demo.ts",
+    "fonts": "tsx src/util/fetch-fonts.ts",
+    "test": "node --import tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.40.1",
+    "@resvg/resvg-js": "^2.6.2",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.7",
+    "picocolors": "^1.1.1",
+    "satori": "^0.12.1",
+    "satori-html": "^0.3.2",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

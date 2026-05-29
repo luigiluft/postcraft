@@ -1,0 +1,15 @@
+node_modules/
+dist/
+out/
+.cache/
+.env
+.env.local
+*.log
+# rendered artifacts
+runs/
+*.png
+!fixtures/**/*.png
+!docs/**/*.png
+!landing/**/*.png
+# fonts are fetched at setup
+.fonts/

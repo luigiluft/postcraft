@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Postcraft — conteúdo visual a partir de tudo que a sua empresa já é</title>
+<meta name="description" content="A Postcraft lê site, notícias, redes e marca da sua empresa, entende o que o seu comprador quer ler e entrega carrosséis B2B prontos pra postar. Sem template genérico." />
+<meta property="og:title" content="Postcraft — o conteúdo que o seu comprador quer ver" />
+<meta property="og:description" content="ICP editável + art direction por slide + pesquisa visual de concorrentes. Carrosséis prontos pra postar." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#FAF8F4; --surface:#FFFFFF; --surface-2:#F4F1EB;
+    --ink:#16181D; --ink-2:#3C3F46; --muted:#7A7A72; --line:#EAE3D8;
+    --accent:#E8643C; --accent-ink:#B8481F; --dark:#0E1116;
+    --display:'Fraunces',Georgia,serif; --body:'Inter',system-ui,sans-serif;
+    --maxw:1160px; --r:14px;
+    --shadow:0 1px 2px rgba(20,24,29,.04), 0 12px 32px -12px rgba(20,24,29,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  a{color:inherit;text-decoration:none}
+  .accent{color:var(--accent)}
+  .serif{font-family:var(--display)}
+  .kicker{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-ink);font-weight:600}
+  .muted{color:var(--muted)}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:50;background:rgba(250,248,244,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .logo{font-family:var(--display);font-weight:600;font-size:21px;letter-spacing:-.01em}
+  .logo b{color:var(--accent)}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{font-size:14.5px;color:var(--ink-2);font-weight:500;transition:color .2s}
+  .navlinks a:hover{color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;padding:11px 20px;border-radius:8px;transition:all .18s;cursor:pointer;border:1px solid transparent}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:var(--accent-ink);transform:translateY(-1px);box-shadow:0 10px 24px -10px rgba(232,100,60,.55)}
+  .btn-ghost{border-color:var(--line);color:var(--ink);background:var(--surface)}
+  .btn-ghost:hover{border-color:var(--ink);transform:translateY(-1px)}
+  @media(max-width:740px){.navlinks a:not(.btn){display:none}}
+
+  /* hero */
+  header{padding:84px 0 56px;position:relative}
+  header::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(55% 60% at 85% 0%, rgba(232,100,60,.10), transparent 70%)}
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  h1{font-family:var(--display);font-weight:600;font-size:clamp(38px,5vw,62px);line-height:1.04;letter-spacing:-.02em;margin:18px 0 22px}
+  h1 em{font-style:normal;color:var(--accent)}
+  .lede{font-size:18.5px;color:var(--ink-2);max-width:540px;margin-bottom:30px}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .micro{margin-top:16px;font-size:13px;color:var(--muted)}
+  .hero-shots{position:relative;height:430px}
+  .hero-shots img{position:absolute;width:225px;border-radius:12px;box-shadow:var(--shadow);border:1px solid rgba(0,0,0,.04)}
+  .hero-shots img:nth-child(1){top:10px;left:0;transform:rotate(-5deg);z-index:1}
+  .hero-shots img:nth-child(2){top:0;right:30px;transform:rotate(4deg);z-index:3}
+  .hero-shots img:nth-child(3){bottom:0;left:90px;transform:rotate(-1deg);z-index:2}
+  @media(max-width:900px){.hero{grid-template-columns:1fr}.hero-shots{display:none}}
+
+  /* strip */
+  .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:30px 24px}
+  .strip .n{font-family:var(--display);font-size:30px;color:var(--ink);font-weight:600}
+  .strip .l{font-size:12.5px;color:var(--muted);margin-top:2px}
+  @media(max-width:740px){.strip .wrap{grid-template-columns:repeat(2,1fr)}}
+
+  section{padding:78px 0}
+  .eyebrow{margin-bottom:13px}
+  h2{font-family:var(--display);font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;letter-spacing:-.01em;max-width:720px}
+  .sub{font-size:17.5px;color:var(--ink-2);max-width:600px;margin-top:14px}
+
+  /* problem */
+  .problem{background:var(--surface-2)}
+  .problem .row{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+  .problem ul{list-style:none;margin-top:22px}
+  .problem li{padding:13px 0;border-bottom:1px solid var(--line);font-size:16px;color:var(--ink-2);display:flex;gap:12px}
+  .problem li::before{content:"✕";color:var(--accent);font-weight:700}
+  .quote{font-family:var(--display);font-size:25px;line-height:1.32;color:var(--ink)}
+  @media(max-width:740px){.problem .row{grid-template-columns:1fr}}
+
+  /* wedges */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px;box-shadow:var(--shadow);transition:transform .2s}
+  .card:hover{transform:translateY(-4px)}
+  .card .num{font-family:var(--display);color:var(--accent);font-size:19px;font-weight:600}
+  .card h3{font-family:var(--display);font-size:21px;font-weight:600;margin:10px 0 8px}
+  .card p{color:var(--muted);font-size:14.5px}
+  @media(max-width:820px){.cards{grid-template-columns:1fr}}
+
+  /* how — steps with prints */
+  .flow{display:flex;flex-direction:column;gap:34px;margin-top:52px}
+  .flow-step{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center}
+  .flow-step:nth-child(even) .flow-copy{order:2}
+  .flow-num{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:10px;background:var(--surface);border:1px solid var(--line);font-family:var(--display);font-weight:600;color:var(--accent);box-shadow:var(--shadow)}
+  .flow-copy h3{font-family:var(--display);font-size:24px;font-weight:600;margin:14px 0 8px}
+  .flow-copy p{color:var(--ink-2);font-size:16px;max-width:440px}
+  @media(max-width:820px){.flow-step{grid-template-columns:1fr;gap:20px}.flow-step:nth-child(even) .flow-copy{order:0}}
+
+  /* shot panels (the "prints") */
+  .shot{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+  .shot-bar{display:flex;align-items:center;gap:7px;padding:11px 14px;background:var(--surface-2);border-bottom:1px solid var(--line)}
+  .dot{width:10px;height:10px;border-radius:50%;background:#D8D2C7}
+  .shot-bar .url{margin-left:10px;font-size:13px;color:var(--muted);font-family:var(--body)}
+  .shot-body{padding:22px}
+  .panel-head{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:16px;display:flex;justify-content:space-between}
+  .panel-head .ed{color:var(--accent);text-transform:none;letter-spacing:0}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+  .tags span{font-size:13px;background:var(--surface-2);border:1px solid var(--line);padding:6px 11px;border-radius:20px;color:var(--ink-2)}
+  .tags .ok{color:var(--accent-ink)}
+  .extract{font-family:var(--display);font-size:18px;color:var(--ink);line-height:1.4;border-left:3px solid var(--accent);padding-left:14px}
+  .icp-name{font-family:var(--display);font-size:20px;font-weight:600;margin-bottom:14px}
+  .lbl{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:14px 0 8px;font-weight:600}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips span{font-size:13.5px;padding:6px 12px;border-radius:8px;background:var(--surface-2);color:var(--ink-2)}
+  .chips.alt span{background:#FCEDE6;color:var(--accent-ink);font-style:italic}
+  .swatches{display:flex;gap:10px;margin-bottom:18px}
+  .swatches span{width:46px;height:46px;border-radius:8px;border:1px solid rgba(0,0,0,.06)}
+  .dodont{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .dodont b{font-size:13px}.dodont .ok{color:var(--accent-ink)}.dodont .no{color:#9A9A92}
+  .dodont p{font-size:14px;color:var(--ink-2);margin-top:5px}
+  .concepts{list-style:none}
+  .concepts li{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15.5px;color:var(--ink)}
+  .concepts li:last-child{border-bottom:0}
+  .pill{flex:none;font-size:11.5px;font-weight:600;color:var(--accent-ink);background:#FCEDE6;padding:4px 9px;border-radius:20px}
+  .shot.carousels{background:var(--dark);border:0;padding:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .shot.carousels img{width:100%;border-radius:8px}
+
+  /* gallery */
+  .gallery{background:var(--surface-2)}
+  .grid-imgs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+  .grid-imgs img{width:100%;border-radius:10px;box-shadow:var(--shadow);transition:transform .2s}
+  .grid-imgs img:hover{transform:scale(1.03)}
+  @media(max-width:820px){.grid-imgs{grid-template-columns:repeat(2,1fr)}}
+  .note{margin-top:16px;font-size:12.5px;color:var(--muted)}
+
+  /* pricing */
+  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+  .tier{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:30px;display:flex;flex-direction:column;box-shadow:var(--shadow)}
+  .tier.feature{border:2px solid var(--accent);position:relative}
+  .tier .badge{align-self:flex-start;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink);font-weight:700;margin-bottom:12px}
+  .tier h3{font-family:var(--display);font-size:22px;font-weight:600}
+  .price{font-family:var(--display);font-size:38px;font-weight:600;margin:14px 0 2px}
+  .price small{font-size:15px;color:var(--muted);font-family:var(--body)}
+  .perpost{font-size:13px;color:var(--muted);margin-bottom:6px}
+  .tier ul{list-style:none;margin:18px 0 24px;flex:1}
+  .tier li{padding:8px 0;font-size:14.5px;color:var(--ink-2);border-bottom:1px solid var(--line);display:flex;gap:9px}
+  .tier li::before{content:"→";color:var(--accent)}
+  .tripwire{margin-top:20px;background:var(--surface);border:1px dashed var(--accent);border-radius:var(--r);padding:24px 28px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+  @media(max-width:820px){.tiers{grid-template-columns:1fr}}
+
+  /* faq */
+  details{border-bottom:1px solid var(--line);padding:18px 0}
+  summary{font-family:var(--display);font-size:19px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+  summary::after{content:"+";color:var(--accent)}
+  details[open] summary::after{content:"–"}
+  details p{color:var(--muted);font-size:15.5px;margin-top:10px;max-width:760px}
+
+  .final{text-align:center;padding:104px 0;background:var(--dark);color:#F4F1EA}
+  .final h2{margin:0 auto;color:#F4F1EA}
+  .final .sub{margin:14px auto 30px;color:#C9C4B8}
+  .final .kicker{color:var(--accent2,#F0875E)}
+  footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:13.5px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="logo">Post<b>craft</b></div>
+  <div class="navlinks">
+    <a href="#como">Como funciona</a>
+    <a href="#exemplos">Exemplos</a>
+    <a href="#precos">Preços</a>
+    <a class="btn btn-primary" href="#cta">Carrossel de teste</a>
+  </div>
+</div></nav>
+
+<header><div class="wrap">
+  <div class="hero">
+    <div>
+      <div class="kicker">Motor de conteúdo visual · B2B</div>
+      <h1>O conteúdo que o seu comprador <em>quer ver</em>, gerado a partir de tudo que a sua empresa já é.</h1>
+      <p class="lede">A Postcraft lê o site, as notícias, as redes e a marca da sua empresa, entende o que o seu comprador quer ler, estuda os concorrentes — e entrega carrosséis prontos pra postar. Sem template genérico.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#cta">Quero um carrossel de teste →</a>
+        <a class="btn btn-ghost" href="#como">Ver como funciona</a>
+      </div>
+      <p class="micro">Teste sem custo: você manda o domínio, a gente devolve 1 carrossel na sua marca em até 48h.</p>
+    </div>
+    <div class="hero-shots">
+      <img src="assets/sample-mirror.png" alt="Slide gerado pela Postcraft" />
+      <img src="assets/sample-cover.png" alt="Capa de carrossel gerada pela Postcraft" />
+      <img src="assets/sample-stat.png" alt="Slide de dado gerado pela Postcraft" />
+    </div>
+  </div>
+</div></header>
+
+<div class="strip"><div class="wrap">
+  <div><div class="n">4 fontes</div><div class="l">site · notícias · redes · concorrentes</div></div>
+  <div><div class="n">5 etapas</div><div class="l">do domínio ao carrossel pronto</div></div>
+  <div><div class="n">&lt; 48h</div><div class="l">do briefing ao primeiro post</div></div>
+  <div><div class="n">1080×1350</div><div class="l">texto sempre legível</div></div>
+</div></div>
+
+<!-- problem -->
+<section class="problem"><div class="wrap">
+  <div class="row">
+    <div>
+      <div class="kicker eyebrow">O problema</div>
+      <h2>As ferramentas de IA cospem o mesmo post genérico — e o seu comprador ignora.</h2>
+      <ul>
+        <li>Um template estampado 6 vezes, sem hierarquia.</li>
+        <li>Texto borrado dentro da imagem gerada por IA.</li>
+        <li>“Escolha um público” em vez de um ICP de verdade.</li>
+        <li>Números inventados que destroem a sua credibilidade.</li>
+      </ul>
+    </div>
+    <div>
+      <p class="quote">“A maioria das ferramentas executa. Nenhuma <span class="accent">entende quem compra</span> e desenha cada slide pra essa pessoa.”</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- wedges -->
+<section><div class="wrap">
+  <div class="kicker eyebrow">Por que é diferente</div>
+  <h2>Não é mais um gerador. É o ciclo inteiro — inteligência, craft e prova.</h2>
+  <div class="cards">
+    <div class="card"><div class="num">01</div><h3>ICP editável como motor</h3><p>Modelamos o seu comprador — dores, vocabulário literal, objeções, gatilhos — e re-miramos cada post nele. Não é “escolher um público”.</p></div>
+    <div class="card"><div class="num">02</div><h3>Art direction por slide</h3><p>Cada slide tem a sua anatomia: capa que para o scroll, miolo que informa, prova que convence, CTA que converte.</p></div>
+    <div class="card"><div class="num">03</div><h3>Pesquisa visual embutida</h3><p>Estudamos referências globais e os seus concorrentes locais e transformamos a linguagem deles em direção de arte pra sua marca.</p></div>
+  </div>
+</div></section>
+
+<!-- how — with prints -->
+<section id="como"><div class="wrap">
+  <div class="kicker eyebrow">Como funciona</div>
+  <h2>Do domínio da sua empresa ao carrossel pronto — você vê cada etapa.</h2>
+  <div class="flow">
+
+    <div class="flow-step">
+      <div class="flow-copy">
+        <div class="flow-num">1</div>
+        <h3>Lê tudo que a empresa já é</h3>
+        <p>Rastreamos site, notícias, redes e o kit de marca (cores, fontes, logo). Nada de briefing em branco.</p>
+      </div>
+      <div class="flow-shot">
+        <div class="shot">
+          <div class="shot-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">empresax.com.br</span></div>
+          <div class="shot-body">
+            <div class="tags"><span class="ok">✓ site · 8 páginas</span><span class="ok">✓ notícias · 6</span><span class="ok">✓ Instagram · 12 posts</span><span class="ok">✓ 2 concorrentes</span></div>
+            <div class="extract">“Operamos o e-commerce de marcas D2C de ponta a ponta — com a marca do cliente 100% na frente.”</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flow-step">
+      <div class="flow-copy">
+        <div class="flow-num">2</div>
+        <h3>Descobre quem compra e o que quer ler</h3>
+        <p>Posicionamento, voz, ICP editável, pilares e provas — cada número classificado pela origem, nunca inventado.</p>
+      </div>
+      <div class="flow-shot">
+        <div class="shot"><div class="shot-body">
+          <div class="panel-head">ICP <span class="ed">editável ✎</span></div>
+          <div class="icp-name">Head de E-commerce / Founder D2C</div>
+          <div class="lbl">Dores</div>
+          <div class="chips"><span>ruptura de estoque</span><span>frete sangra a margem</span><span>SAC consome o time</span></div>
+          <div class="lbl">Termos que ele busca</div>
+          <div class="chips alt"><span>“frete grátis sangra a margem”</span><span>“vale a pena terceirizar?”</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="flow-step">
+      <div class="flow-copy">
+        <div class="flow-num">3</div>
+        <h3>Estuda referências e concorrentes</h3>
+        <p>Vira um playbook visual com paleta, tipografia e regras de layout que dirigem a geração — com a referência ao lado.</p>
+      </div>
+      <div class="flow-shot">
+        <div class="shot"><div class="shot-body">
+          <div class="panel-head">Playbook visual</div>
+          <div class="swatches"><span style="background:#101418"></span><span style="background:#E8643C"></span><span style="background:#F4F1EA"></span><span style="background:#8A8F98"></span></div>
+          <div class="dodont">
+            <div><b class="ok">Fazer</b><p>uma ideia por slide · objeto-metáfora na paleta da marca</p></div>
+            <div><b class="no">Evitar</b><p>mesma capa 6× · foto de galpão genérica</p></div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="flow-step">
+      <div class="flow-copy">
+        <div class="flow-num">4</div>
+        <h3>Gera os conceitos e o roteiro slide a slide</h3>
+        <p>Conceitos mapeados a pilar × ICP × ângulo, com copy, briefs de imagem e legendas para Instagram e LinkedIn.</p>
+      </div>
+      <div class="flow-shot">
+        <div class="shot"><div class="shot-body">
+          <div class="panel-head">Conceitos gerados</div>
+          <ul class="concepts">
+            <li><span class="pill">A conta real</span> “O frete grátis não é grátis.”</li>
+            <li><span class="pill">Operação</span> “4 sinais de que seu CD já te segura.”</li>
+            <li><span class="pill">Casos</span> “Do contrato ao 1º pedido: 21 dias.”</li>
+          </ul>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="flow-step">
+      <div class="flow-copy">
+        <div class="flow-num">5</div>
+        <h3>Entrega pronto pra postar</h3>
+        <p>A IA gera a textura; uma camada determinística desenha o texto sempre legível. Saída 1080×1350 no padrão da marca.</p>
+      </div>
+      <div class="flow-shot">
+        <div class="shot carousels">
+          <img src="assets/sample-cover.png" alt="Capa" />
+          <img src="assets/sample-stat.png" alt="Dado" />
+          <img src="assets/sample-cta.png" alt="CTA" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div></section>
+
+<!-- gallery -->
+<section class="gallery" id="exemplos"><div class="wrap">
+  <div class="kicker eyebrow">Saída real do motor</div>
+  <h2>Carrosséis gerados de ponta a ponta — não mockups.</h2>
+  <p class="sub">Exemplo para uma marca de demonstração (fullcommerce B2B). Cada slide carrega uma ideia e uma anatomia própria.</p>
+  <div class="grid-imgs">
+    <img src="assets/sample-cover.png" alt="Capa" />
+    <img src="assets/sample-mirror.png" alt="Problema" />
+    <img src="assets/sample-stat.png" alt="Prova" />
+    <img src="assets/sample-cta.png" alt="CTA" />
+  </div>
+  <p class="note">Renderizado pelo motor Postcraft (Satori → PNG). Mesma identidade nos 6 slides, cada um com função distinta.</p>
+</div></section>
+
+<!-- pricing -->
+<section id="precos"><div class="wrap">
+  <div class="kicker eyebrow">Planos</div>
+  <h2>Comece com um diagnóstico. Escale quando a operação fizer sentido.</h2>
+  <p class="sub">Valores em reais, cobrança via Pix ou cartão. Sem fidelidade nos planos mensais.</p>
+  <div class="tiers">
+    <div class="tier">
+      <div class="badge">Starter</div>
+      <h3>Uma marca, ritmo enxuto</h3>
+      <div class="price">R$ 1.490<small> /mês</small></div>
+      <div class="perpost">8 carrosséis/mês · ~R$ 186 por post</div>
+      <ul><li>1 marca</li><li>8 posts (carrosséis + legendas)</li><li>ICP + playbook visual</li><li>1 rodada de ajustes</li></ul>
+      <a class="btn btn-ghost" href="#cta">Começar</a>
+    </div>
+    <div class="tier feature">
+      <div class="badge">Studio · mais escolhido</div>
+      <h3>Operação de conteúdo completa</h3>
+      <div class="price">R$ 2.990<small> /mês</small></div>
+      <div class="perpost">20 carrosséis/mês · ~R$ 150 por post</div>
+      <ul><li>1 marca</li><li>20 posts/mês</li><li>Pesquisa de concorrentes contínua</li><li>Calendário + 2 rodadas</li><li>Legendas IG + LinkedIn</li></ul>
+      <a class="btn btn-primary" href="#cta">Falar agora</a>
+    </div>
+    <div class="tier">
+      <div class="badge">Agência · White-label</div>
+      <h3>Várias marcas, sua marca na frente</h3>
+      <div class="price">a partir de<br>R$ 6.000<small> /mês</small></div>
+      <div class="perpost">volume sob medida</div>
+      <ul><li>Múltiplas marcas</li><li>Entrega white-label</li><li>Fluxo de aprovação</li><li>Prioridade</li></ul>
+      <a class="btn btn-ghost" href="#cta">Pedir proposta</a>
+    </div>
+  </div>
+  <div class="tripwire">
+    <div>
+      <div class="kicker">Porta de entrada</div>
+      <h3 class="serif" style="font-size:22px;margin-top:6px">Diagnóstico ICP + Playbook Visual — R$ 990 (uma vez)</h3>
+      <p class="muted" style="font-size:14.5px;margin-top:6px;max-width:640px">Inteligência da sua empresa, ICP editável, playbook visual e 2 carrosséis de amostra. Abatido no 1º mês se virar plano.</p>
+    </div>
+    <a class="btn btn-primary" href="#cta">Quero o diagnóstico</a>
+  </div>
+</div></section>
+
+<!-- faq -->
+<section><div class="wrap" style="max-width:860px">
+  <div class="kicker eyebrow">Dúvidas</div>
+  <h2>Perguntas frequentes</h2>
+  <div style="margin-top:28px">
+    <details open><summary>Vocês inventam números sobre a minha empresa?</summary><p>Nunca. Todo dado é classificado pela origem (verificável publicamente, interno anonimizado ou ilustrativo). Número sem prova real não entra na peça sob a voz da marca.</p></details>
+    <details><summary>Como é o teste gratuito?</summary><p>Você manda o domínio e os perfis. A gente roda o motor e devolve 1 carrossel na sua marca em até 48h, com o ICP e a tese por trás. Sem compromisso.</p></details>
+    <details><summary>Funciona pra qualquer segmento?</summary><p>O foco é B2B (comércio, distribuição, SaaS, serviços) — onde o ICP é mais nítido e o carrossel converte melhor. Outros segmentos sob conversa.</p></details>
+    <details><summary>Eu posto ou vocês postam?</summary><p>Entregamos pronto pra postar (PNG 1080×1350 + legendas IG/LinkedIn + hashtags). Agendamento entra no plano Studio em diante.</p></details>
+    <details><summary>O texto da imagem sai borrado como em outras IAs?</summary><p>Não. A IA gera só a textura de fundo; o texto é desenhado por uma camada determinística — sempre nítido e no padrão tipográfico da marca.</p></details>
+  </div>
+</div></section>
+
+<!-- final -->
+<section class="final" id="cta"><div class="wrap">
+  <div class="kicker eyebrow" style="text-align:center">Comece agora</div>
+  <h2>Manda o domínio da sua empresa.<br>A gente devolve um carrossel.</h2>
+  <p class="sub">Teste sem custo, sem cadastro. Você vê a qualidade antes de decidir qualquer coisa.</p>
+  <a class="btn btn-primary" href="mailto:luigi@luft.com.br?subject=Quero%20um%20carrossel%20de%20teste%20Postcraft&body=Empresa:%0AD%C3%ADnio:%0AInstagram/LinkedIn:%0AConcorrentes:%0AObjetivo:">Quero meu carrossel de teste →</a>
+</div></section>
+
+<footer><div class="wrap">
+  <div>Postcraft · motor de conteúdo visual B2B</div>
+  <div>Feito com o motor Postcraft · © 2026</div>
+</div></footer>
+
+</body>
+</html>

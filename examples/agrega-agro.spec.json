@@ -1,0 +1,130 @@
+{
+  "conceptId": "agro-digital-fortalece-relacao",
+  "format": "carousel",
+  "title": "No agro, o digital não substitui a relação",
+  "valueAxis": ["inform", "prove", "entertain"],
+  "designTokens": {
+    "palette": {
+      "bg": "#14342B",
+      "ink": "#F4ECDD",
+      "accent": "#D98C3F",
+      "muted": "#9FB0A2",
+      "surface": "#1F5C3D"
+    },
+    "fonts": { "display": "Fraunces", "body": "Inter" },
+    "radius": 0,
+    "mood": ["editorial", "autoral", "premium B2B", "terra-e-verde"]
+  },
+  "slides": [
+    {
+      "n": 1,
+      "archetype": "cover",
+      "fields": {
+        "kicker": "AGREGA AGRO · OPERAR O CANAL",
+        "title": "No agro, o digital|não substitui a relação —|ele {fortalece}.",
+        "subtitle": "Por que vender insumo online não tira o seu vendedor do jogo."
+      },
+      "image": {
+        "role": "background",
+        "prompt": "editorial still-life, a single green seedling sprouting from a furrow of dark soil that turns into faint circuit-board lines, deep forest green backdrop, warm amber rim light, premium agribusiness mood",
+        "negativePrompt": "text, words, letters, logos, watermark, ui",
+        "style": "Stripe Press / Monocle editorial product styling",
+        "palette": ["#14342B", "#D98C3F", "#1F5C3D"],
+        "aspectRatio": "4:5"
+      }
+    },
+    {
+      "n": 2,
+      "archetype": "mirror",
+      "fields": {
+        "punchline": "Você adia o e-commerce com medo de|{esfriar} a relação e de errar no receituário.",
+        "aside": "(enquanto a indústria já vende direto pro seu produtor)"
+      },
+      "image": {
+        "role": "background",
+        "prompt": "a warm handshake between two farmers slowly dissolving into pixels at the edges, golden hour field, deep green tones, editorial cinematic",
+        "negativePrompt": "text, words, letters, logos, watermark",
+        "style": "cinematic editorial photograph",
+        "palette": ["#14342B", "#D98C3F", "#1F5C3D"],
+        "aspectRatio": "4:5"
+      }
+    },
+    {
+      "n": 3,
+      "archetype": "context",
+      "fields": {
+        "title": "A venda no agro virou {híbrida}",
+        "body": "O produtor pesquisa online|e fecha com quem confia.|A loja digital serve o cliente E o vendedor — não um no lugar do outro."
+      },
+      "image": {
+        "role": "background",
+        "prompt": "a tractor and a smartphone casting a single shared shadow over a soy field at golden hour, deep green editorial, minimal",
+        "negativePrompt": "text, words, letters, logos, watermark",
+        "style": "editorial cinematic photograph",
+        "palette": ["#14342B", "#D98C3F", "#1F5C3D"],
+        "aspectRatio": "4:5"
+      }
+    },
+    {
+      "n": 4,
+      "archetype": "stat",
+      "fields": {
+        "label": "LOGÍSTICA LUFT AGRO",
+        "number": "14 filiais",
+        "desc": "estratégicas,|entregando em todo o Brasil",
+        "sub": "50 anos de {DNA Luft} — operação que e-commerce próprio não compra"
+      },
+      "image": {
+        "role": "background",
+        "prompt": "a stylized map of Brazil drawn with delivery routes and small grain-sack nodes glowing, deep forest green background, amber route lines, editorial infographic still-life",
+        "negativePrompt": "text, words, letters, country labels, logos, watermark",
+        "style": "Monocle data-as-object editorial",
+        "palette": ["#14342B", "#D98C3F", "#1F5C3D"],
+        "aspectRatio": "4:5"
+      }
+    },
+    {
+      "n": 5,
+      "archetype": "quote",
+      "fields": {
+        "lead": "A real é simples:",
+        "quote": "Você não precisa virar empresa|de {tecnologia e logística}.|Precisa vender mais insumo."
+      },
+      "image": {
+        "role": "background",
+        "prompt": "an open hand holding dark fertile soil with one small glowing node of light in it, deep green editorial still-life, warm amber highlight",
+        "negativePrompt": "text, words, letters, logos, watermark",
+        "style": "editorial macro still-life",
+        "palette": ["#14342B", "#D98C3F", "#1F5C3D"],
+        "aspectRatio": "4:5"
+      }
+    },
+    {
+      "n": 6,
+      "archetype": "cta",
+      "fields": {
+        "question": "Quanto a venda direta da indústria|já tirou da sua {revenda}?",
+        "ctaLabel": "Agende uma reunião",
+        "ctaMeta": "agro.agrega.com.br · link na bio"
+      },
+      "image": {
+        "role": "background",
+        "prompt": "two dirt roads merging into one through a green soy field seen from above, golden hour, deep green editorial, minimal",
+        "negativePrompt": "text, words, letters, logos, watermark",
+        "style": "aerial editorial photograph",
+        "palette": ["#14342B", "#D98C3F", "#1F5C3D"],
+        "aspectRatio": "4:5"
+      }
+    }
+  ],
+  "caption": {
+    "instagram": "No agro, o digital não substitui relações — fortalece.\n\nA gente opera o e-commerce da sua revenda ou cooperativa de ponta a ponta — com receituário agronômico, RT e controle de crédito resolvidos na loja — e plugga na logística Luft Agro: 14 filiais estratégicas entregando no Brasil inteiro, com 50 anos de DNA Luft por trás.\n\nVocê vende mais insumo, atende o produtor distante e protege o canal — sem virar empresa de tecnologia e logística.\n\nA pergunta não é se o agro vai vender online. É quem vai operar isso por você. Agende uma reunião — link na bio.",
+    "linkedin": "A objeção número 1 da revenda de insumos sobre e-commerce é \"meu produtor não compra sem o agrônomo do lado\". Correto — e é exatamente por isso que digital no agro é MEIO, não fim. A loja digital existe para organizar a venda e armar o time comercial, não para substituí-lo. Some isso à logística Luft Agro (14 filiais, entrega nacional) e a revenda escala sem virar empresa de tecnologia. O canal não morre no digital; ele se fortalece — se for operado por quem entende o agro."
+  },
+  "hashtags": ["#agro", "#agronegocio", "#insumos", "#fullcommerce", "#revenda", "#cooperativa", "#LuftAgro"],
+  "cta": {
+    "label": "Agende uma reunião",
+    "meta": "agro.agrega.com.br · link na bio",
+    "url": "https://agro.agrega.com.br/"
+  }
+}

@@ -33,12 +33,21 @@ export class SatoriRenderer implements RendererAdapter {
 
   async renderCarousel(
     spec: CarouselSpec,
-    opts: { assetsDir?: string; outDir: string; brandName?: string },
+    opts: {
+      assetsDir?: string;
+      outDir: string;
+      brandName?: string;
+      logoPath?: string;
+    },
   ): Promise<RenderedSlide[]> {
     const fonts = await loadFonts();
     fs.mkdirSync(opts.outDir, { recursive: true });
     const out: RenderedSlide[] = [];
     const total = spec.slides.length;
+    const logoUri =
+      opts.logoPath && fs.existsSync(opts.logoPath)
+        ? toDataUri(opts.logoPath)
+        : undefined;
 
     for (const slide of spec.slides) {
       const bgPath = opts.assetsDir
@@ -53,6 +62,7 @@ export class SatoriRenderer implements RendererAdapter {
         hasBg,
         opts.brandName ?? "",
         spec.designTokens,
+        Boolean(logoUri),
       );
       // Collapse whitespace BETWEEN tags so satori-html doesn't create stray
       // text-node children, then guarantee every empty <div></div> carries
@@ -73,6 +83,12 @@ export class SatoriRenderer implements RendererAdapter {
       if (hasBg && bgPath) {
         const image = `<image href="${toDataUri(bgPath)}" x="0" y="0" width="${W}" height="${H}" preserveAspectRatio="xMidYMid slice"/>`;
         svg = svg.replace(/(<svg[^>]*?>)/, `$1${image}`);
+      }
+      if (logoUri) {
+        // Composited LAST (on top) and crisp — top-right corner.
+        const L = 100;
+        const logo = `<image href="${logoUri}" x="${W - PAD - L}" y="${PAD - 6}" width="${L}" height="${L}" preserveAspectRatio="xMidYMid meet"/>`;
+        svg = svg.replace("</svg>", `${logo}</svg>`);
       }
       const png = new Resvg(svg, { fitTo: { mode: "width", value: W } })
         .render()
@@ -96,6 +112,7 @@ function frame(
   hasBg: boolean,
   brandName: string,
   t: DesignTokens,
+  hasLogo = false,
 ): string {
   const p = t.palette;
   const kicker =
@@ -108,11 +125,13 @@ function frame(
   // Scrim darkens a photo for legibility (only needed over an image).
   // NOTE: satori-html mis-parses truly-empty <div></div>; empty decorative
   // divs must carry display:flex (also enforced globally by fixEmptyDivs).
+  // Stronger, bottom-weighted scrim so cream text stays legible even over a
+  // bright daylight photo (a 3-stop keeps the middle image visible).
   const scrim = hasBg
     ? `<div style="display:flex;position:absolute;top:0;left:0;width:${W}px;height:${H}px;background-image:linear-gradient(180deg, ${hexA(
         p.bg,
-        0.35,
-      )} 0%, ${hexA(p.bg, 0.85)} 100%)"></div>`
+        0.5,
+      )} 0%, ${hexA(p.bg, 0.42)} 40%, ${hexA(p.bg, 0.93)} 100%)"></div>`
     : "";
 
   return `<div style="display:flex;flex-direction:column;width:${W}px;height:${H}px;position:relative;${rootBg}color:${p.ink};font-family:Body">
@@ -122,9 +141,7 @@ function frame(
       <div style="font-size:24px;font-weight:600;letter-spacing:3px;color:${p.muted};text-transform:uppercase">${esc(
         kicker.slice(0, 40),
       )}</div>
-      <div style="font-size:24px;font-weight:700;letter-spacing:1px;color:${p.ink}">${esc(
-        brandName,
-      )}</div>
+      <div style="font-size:24px;font-weight:700;letter-spacing:1px;color:${p.ink}">${hasLogo ? "" : esc(brandName)}</div>
     </div>
     <div style="display:flex;flex-direction:column;flex:1;justify-content:center">
       ${body(slide, p)}

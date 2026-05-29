@@ -74,7 +74,13 @@ export interface RendererAdapter {
   /** Compose a carousel spec into legible 1080×1350 PNG slides. */
   renderCarousel(
     spec: CarouselSpec,
-    opts: { assetsDir?: string; outDir: string; brandName?: string },
+    opts: {
+      assetsDir?: string;
+      outDir: string;
+      brandName?: string;
+      /** Optional brand logo PNG composited (crisp) onto every slide. */
+      logoPath?: string;
+    },
   ): Promise<RenderedSlide[]>;
 }
 

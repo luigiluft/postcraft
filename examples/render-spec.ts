@@ -19,9 +19,10 @@ import { CarouselSpecSchema } from "../src/types.js";
 const specPath = process.argv[2];
 const brandName = process.argv[3] ?? "Brand";
 const outDir = process.argv[4] ?? "runs/spec";
+const logoPath = process.argv[5];
 
 if (!specPath) {
-  console.error("usage: tsx examples/render-spec.ts <spec.json> [brandName] [outDir]");
+  console.error("usage: tsx examples/render-spec.ts <spec.json> [brandName] [outDir] [logo.png]");
   process.exit(1);
 }
 
@@ -52,6 +53,7 @@ const slides = await new SatoriRenderer().renderCarousel(spec, {
   assetsDir,
   outDir,
   brandName,
+  logoPath,
 });
 
 fs.writeFileSync(path.join(outDir, "spec.json"), JSON.stringify(spec, null, 2));

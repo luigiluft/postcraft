@@ -37,11 +37,15 @@ async function pickImageGen(): Promise<ImageGenAdapter> {
 
 const imagegen = await pickImageGen();
 for (const s of spec.slides) {
-  if (s.image) {
-    await imagegen
-      .generate(s.image, path.join(assetsDir, `bg-${s.n}.png`))
-      .catch((e) => console.error(`bg ${s.n} failed:`, String(e)));
+  if (!s.image) continue;
+  const bgFile = path.join(assetsDir, `bg-${s.n}.png`);
+  if (fs.existsSync(bgFile)) {
+    console.log(`bg ${s.n}: reusing existing ${path.basename(bgFile)}`);
+    continue; // pre-supplied background (e.g. Higgsfield/fal) — don't overwrite
   }
+  await imagegen
+    .generate(s.image, bgFile)
+    .catch((e) => console.error(`bg ${s.n} failed:`, String(e)));
 }
 
 const slides = await new SatoriRenderer().renderCarousel(spec, {

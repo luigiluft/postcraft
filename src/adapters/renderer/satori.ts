@@ -483,7 +483,14 @@ function esc(s: string): string {
 }
 
 function toDataUri(file: string): string {
-  return `data:image/png;base64,${fs.readFileSync(file).toString("base64")}`;
+  const ext = file.toLowerCase().split(".").pop();
+  const mime =
+    ext === "jpg" || ext === "jpeg"
+      ? "image/jpeg"
+      : ext === "webp"
+        ? "image/webp"
+        : "image/png";
+  return `data:${mime};base64,${fs.readFileSync(file).toString("base64")}`;
 }
 
 /** #RRGGBB + alpha → rgba(). */

@@ -28,6 +28,7 @@ program
   .option("--concepts <n>", "how many concepts to ideate", "6")
   .option("--kits <n>", "how many to render into full kits", "2")
   .option("--out <dir>", "output directory")
+  .option("--logo <pathOrUrl>", "brand logo (local path or URL); auto-extracted if omitted")
   .action(async (o) => {
     const raw = o.brief
       ? JSON.parse(fs.readFileSync(o.brief, "utf8"))
@@ -51,6 +52,7 @@ program
       concepts: Number(o.concepts),
       kits: Number(o.kits),
       outDir: o.out,
+      logo: o.logo,
     });
 
     console.log(

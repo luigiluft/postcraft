@@ -30,6 +30,7 @@ npm test                 # 5 testes verdes
 - [ ] 2-3 concorrentes (handles ou domínios)
 - [ ] Objetivo do conteúdo (ex.: gerar leads, educar mercado)
 - [ ] Restrições de marca (o que NÃO falar, clientes que não podem ser citados)
+- [ ] Logo (de preferência o **símbolo quadrado**, PNG/SVG) — opcional: o motor extrai do site automaticamente, mas um logo limpo fica melhor no slide
 
 Salve num brief JSON:
 
@@ -55,6 +56,9 @@ npm run cli -- run --brief brief.json --concepts 8 --kits 3
 # ou direto por flags
 npm run cli -- run --name "Empresa X" --domain empresax.com.br \
   --instagram @empresax --competitors "@c1,@c2" --concepts 8 --kits 3
+
+# logo: extraído do site automaticamente; para forçar um logo limpo, use --logo
+npm run cli -- run --brief brief.json --logo ./logo-cliente.png
 ```
 
 Saída em `runs/<empresa>_<timestamp>/`:

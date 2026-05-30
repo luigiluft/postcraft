@@ -6,7 +6,7 @@ Five stages, each pure-ish: `(input, adapters) → typed output`. Run together b
 
 `src/pipeline/harvest.ts`
 
-- **Site:** `scraper.crawl(domain)` (map → scrape top pages, ranked home/about/product/pricing/blog) + `scraper.brandKit(domain)` (logo, palette, fonts).
+- **Site:** `scraper.crawl(domain)` (map → scrape top pages, ranked home/about/product/pricing/blog) + `scraper.brandKit(domain)` → palette, fonts, and **logoUrl** (Firecrawl branding; high-res favicon fallback). The run downloads the logo (rasterizing SVG) and overlays it on every slide; `--logo` overrides.
 - **Site facts:** a small LLM extraction over crawled markdown → `summary`, `products[]`, `valueProps[]` (avoids Firecrawl's expensive AI `/extract`).
 - **News:** `scraper.search("<brand> <domain>")`.
 - **Social:** owned handles (IG/LinkedIn/TikTok) + up to 3 competitors via `social.fetchProfile`.

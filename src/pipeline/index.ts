@@ -12,6 +12,7 @@ import {
   type RunResult,
   RunResultSchema,
 } from "../types.js";
+import { downloadImage, ensurePng } from "../util/download.js";
 import { nowISO, slugify, stamp } from "../util/ids.js";
 import { log } from "../util/logger.js";
 import { generateCarousel, generateConcepts } from "./generate.js";
@@ -27,6 +28,9 @@ export interface RunOptions {
   kits?: number;
   /** Base output directory (a timestamped subdir is created inside). */
   outDir?: string;
+  /** Override the brand logo (local path or URL) overlaid on every slide.
+   * When absent, the harvested brandKit.logoUrl is used automatically. */
+  logo?: string;
 }
 
 export async function run(
@@ -44,6 +48,11 @@ export async function run(
   log.step(`POSTCRAFT RUN — ${brand.name}  →  ${runDir}`);
 
   const footprint = await harvest(brand, adapters);
+  const logoPath = await resolveLogo(
+    opts.logo ?? footprint.brandKit.logoUrl,
+    runDir,
+  );
+  if (logoPath) log.info(`brand logo → ${logoPath}`);
   const intelligence = await understand(footprint, adapters);
   const playbook = await research(intelligence, footprint, adapters);
   const concepts = await generateConcepts(
@@ -66,6 +75,7 @@ export async function run(
     );
     const kit = await renderKit(spec, concept, brand, adapters, {
       outDir: runDir,
+      logoPath,
     });
     kits.push(kit);
   }
@@ -86,4 +96,19 @@ export async function run(
   );
   log.step(`DONE — ${kits.length} content kit(s) · ${concepts.length} concepts · ${runDir}`);
   return result;
+}
+
+/** Resolve a brand logo to a local PNG: download if a URL, rasterize if SVG. */
+async function resolveLogo(
+  src: string | undefined,
+  runDir: string,
+): Promise<string | undefined> {
+  if (!src) return undefined;
+  let p: string | undefined;
+  if (/^https?:\/\//.test(src)) {
+    p = await downloadImage(src, runDir, "brand-logo");
+  } else if (fs.existsSync(src)) {
+    p = src;
+  }
+  return p ? ensurePng(p) : undefined;
 }

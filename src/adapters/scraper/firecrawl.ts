@@ -86,20 +86,39 @@ export class FirecrawlScraper implements ScraperAdapter {
   }
 
   async brandKit(url: string): Promise<BrandKit> {
+    const host = safeHost(url);
+    const favicon = host
+      ? `https://www.google.com/s2/favicons?domain=${host}&sz=256`
+      : undefined;
     try {
       const j = await this.post("/scrape", { url, formats: ["branding"] });
       const b = j.data?.branding ?? j.branding ?? {};
       return {
         colors: b.colors ?? b.palette ?? [],
         fonts: b.fonts ?? [],
-        logoUrl: b.logo ?? b.logoUrl,
+        // Best brand logo if found, else a high-res favicon as last resort.
+        logoUrl: b.logo ?? b.logoUrl ?? b.icon ?? favicon,
         imagery: b.images ?? [],
         visualLanguage: b.description ?? "",
       };
     } catch (e) {
       log.warn("firecrawl branding failed:", String(e));
-      return { colors: [], fonts: [], imagery: [], visualLanguage: "" };
+      return {
+        colors: [],
+        fonts: [],
+        logoUrl: favicon,
+        imagery: [],
+        visualLanguage: "",
+      };
     }
+  }
+}
+
+function safeHost(url: string): string | undefined {
+  try {
+    return new URL(url.startsWith("http") ? url : `https://${url}`).hostname;
+  } catch {
+    return undefined;
   }
 }
 

@@ -18,7 +18,7 @@ export async function renderKit(
   concept: PostConcept,
   brand: BrandInput,
   a: Adapters,
-  opts: { outDir: string },
+  opts: { outDir: string; logoPath?: string },
 ): Promise<ContentKit> {
   log.step(`RENDER — ${spec.title || concept.id}`);
   const kitDir = path.join(opts.outDir, slugify(concept.id) || "kit");
@@ -40,6 +40,7 @@ export async function renderKit(
     assetsDir,
     outDir: kitDir,
     brandName: brand.name,
+    logoPath: opts.logoPath,
   });
 
   // 3. Sidecars for handoff/scheduling

@@ -4,6 +4,11 @@
   "private": true,
   "type": "module",
   "description": "Turn a company's full public footprint (site, news, social, brand) into ICP-targeted visual posts — carousels + images — grounded in global references and local competitors.",
+  "license": "MIT",
+  "author": "Luigi Luft",
+  "homepage": "https://luigiluft.github.io/postcraft-site/",
+  "repository": { "type": "git", "url": "https://github.com/luigiluft/postcraft.git" },
+  "keywords": ["carousel", "instagram", "content", "icp", "b2b", "claude-code", "ai", "marketing"],
   "bin": {
     "postcraft": "bin/postcraft.ts"
   },

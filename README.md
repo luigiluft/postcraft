@@ -31,13 +31,13 @@ A Postcraft lê **tudo que a empresa já comunica** — site, notícias, redes, 
 
 ## 🎬 Veja funcionando — saída real
 
-Gerado de ponta a ponta para a **Agrega Agro** (full-commerce do agronegócio): site real → ICP → concorrentes → carrossel. A IA faz o **fundo**; uma camada determinística desenha o **texto + logo** (sempre nítido).
+Gerado de ponta a ponta para a **Campo Vivo** (full-commerce do agronegócio): site real → ICP → concorrentes → carrossel. A IA faz o **fundo**; uma camada determinística desenha o **texto + logo** (sempre nítido).
 
 <p align="center">
-  <img src="docs/samples/agrega-agro-1.png" width="23%" />
-  <img src="docs/samples/agrega-agro-2.png" width="23%" />
-  <img src="docs/samples/agrega-agro-4.png" width="23%" />
-  <img src="docs/samples/agrega-agro-6.png" width="23%" />
+  <img src="docs/samples/example-1.png" width="23%" />
+  <img src="docs/samples/example-2.png" width="23%" />
+  <img src="docs/samples/example-4.png" width="23%" />
+  <img src="docs/samples/example-6.png" width="23%" />
 </p>
 
 ## ✨ Destaques
@@ -69,7 +69,7 @@ cp -r skills/postcraft ~/.claude/skills/postcraft
 3. Reabra o Claude Code e use em linguagem natural:
 
 ```
-postcraft Agrega Agro
+postcraft Campo Vivo
 # ou: "cria um carrossel da <empresa>"  ·  "gera conteúdo pra <domínio>"
 ```
 
@@ -108,7 +108,7 @@ npm test                          # testes
 # marca real (keys no .env):
 npm run cli -- run --name "Acme" --domain acme.com --instagram @acme --competitors "@r1,@r2"
 # renderizar um spec autorado/editado (reusa fundos, não regasta crédito):
-tsx examples/render-spec.ts examples/agrega-agro.spec.json "Agrega Agro" runs/out caminho/logo.png
+tsx examples/render-spec.ts examples/demo.spec.json "Campo Vivo" runs/out caminho/logo.png
 ```
 
 ## 🛠️ Como funciona
@@ -134,7 +134,7 @@ Detalhes: [ARCHITECTURE](docs/ARCHITECTURE.md) · [PIPELINE](docs/PIPELINE.md) �
 ```
 src/         o motor — tipos (Zod) · gramática de carrossel · prompts · pipeline · adapters
 skills/      a skill do Claude Code (postcraft/SKILL.md)
-examples/    render-spec · agrega-agro.spec.json (carrossel real)
+examples/    render-spec · demo.spec.json (carrossel real)
 landing/     página do produto (HTML self-contained, publicada como site)
 docs/        arquitetura · pipeline · roadmap · research
 bin/         CLI

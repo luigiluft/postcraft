@@ -5,7 +5,7 @@
  *  2) buildCarouselPrompt  → one CarouselSpec for a chosen concept, with
  *     per-slide archetypes + filled slots + per-slide image briefs.
  *
- * Encodes the agrega-content-engine laws, generalized:
+ * Encodes the o motor predecessor laws, generalized:
  *  - Cover must "para-scroll" (entertain/prove, not a lukewarm fact).
  *  - The middle must INFORM; every strong claim anchors to a proof asset, else
  *    it's just opinion. No fabricated numbers — only use intel.proofAssets.

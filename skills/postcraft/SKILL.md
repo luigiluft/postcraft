@@ -29,7 +29,7 @@ Produza, ancorado SÓ no que coletou: posicionamento, voz, **ICP** (dores, desej
 Estude 2-3 concorrentes (sites/Instagram) → playbook visual: anatomia, paleta (hex reais da marca), tipografia, do/don't. Identifique o território vago que a marca pode ocupar.
 
 ### ④ GERA
-Escolha a receita (ex.: `thesis` = capa·espelho·contexto·stat·quote·cta) e escreva um **`carousel-spec.json`** no contrato do repo (ver `examples/agrega-agro.spec.json`). Regras:
+Escolha a receita (ex.: `thesis` = capa·espelho·contexto·stat·quote·cta) e escreva um **`carousel-spec.json`** no contrato do repo (ver `examples/demo.spec.json`). Regras:
 - Capa para-scroll; miolo informa; `prova` só com `proofAsset` real.
 - Marcadores: `{palavra}` = destaque, `|` = quebra de linha.
 - 1 `image.prompt` por slide: objeto/cena que casa com o copy, **claro/luminoso, autêntico ao contexto** (ex.: agro BR = soja Cerrado, etnia local, máquinas reais, fauna regional), na paleta da marca, **SEM TEXTO**; `negativePrompt` banindo texto/logo/watermark.
@@ -38,7 +38,7 @@ Escolha a receita (ex.: `thesis` = capa·espelho·contexto·stat·quote·cta) e 
 ### ⑤ RENDERIZA
 1. **Fundos:** pra cada slide, `higgsfield generate_image` (`nano_banana_pro`, 4:5, "ABSOLUTELY NO TEXT") → poll `job_status sync:true` → baixe pra `runs/<marca>/assets/bg-N.png`. (Sem Higgsfield/fal → o fixture gera gradiente.)
 2. **Render:** `cd $POSTCRAFT_DIR && tsx examples/render-spec.ts <spec.json> "<Marca>" runs/<marca> <logo.png>` — compõe texto + logo nítidos sobre os fundos → `slide-1..6.png` 1080×1350.
-3. Gere uma folha de contato HTML e abra pro usuário (ver `runs/agrega-agro/view.html` como molde).
+3. Gere uma folha de contato HTML e abra pro usuário (ver `runs/demo/view.html` como molde).
 
 ### GATE humano
 Mostre os 6 slides + as legendas. Ajuste de copy = editar o spec e re-renderizar (segundos, sem gastar crédito — o render-spec **reusa** fundos existentes).
@@ -52,6 +52,6 @@ Mostre os 6 slides + as legendas. Ajuste de copy = editar o spec e re-renderizar
 
 ## Referência
 - Contrato do spec + tipos: `src/types.ts` · gramática de slides: `src/carousel/grammar.ts`
-- Exemplo real completo: `examples/agrega-agro.spec.json` (+ `runs/agrega-agro/`)
+- Exemplo real completo: `examples/demo.spec.json` (+ `runs/demo/`)
 - Render isolado: `examples/render-spec.ts <spec> "<Marca>" <out> [logo]`
 - Pipeline automatizado (com keys no `.env`): `npm run cli -- run --domain <d> --instagram @x --competitors "@a,@b"`

@@ -79,7 +79,7 @@ O motor é rápido; o teu olho é o produto. Não pule.
 - **Gate 2 — Conceitos.** Os hooks param o scroll? Variam pilar/ICP? Escolha os melhores para virar kit (`--kits` controla quantos).
 - **Gate 3 — Slides renderizados.** Abra os `slide-*.png`: capa para o scroll? texto legível, sem vazar `{ }` ou `|`? imagem casa com o copy? Ajuste a `spec.json` e re-renderize se preciso.
 
-Checklist de barra de qualidade (do `agrega-content-engine`, generalizado):
+Checklist de barra de qualidade (do `o motor predecessor`, generalizado):
 - [ ] Capa entrega para-scroll (não é só informativa morna)
 - [ ] Miolo informa (uma ideia por slide)
 - [ ] Toda prova ancora num `proofAsset` real

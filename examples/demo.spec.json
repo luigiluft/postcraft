@@ -1,0 +1,129 @@
+{
+  "conceptId": "agro-digital-fortalece-relacao",
+  "format": "carousel",
+  "title": "No agro, o digital não substitui a relação",
+  "valueAxis": ["inform", "prove", "entertain"],
+  "designTokens": {
+    "palette": {
+      "bg": "#14342B",
+      "ink": "#F4ECDD",
+      "accent": "#D98C3F",
+      "muted": "#9FB0A2",
+      "surface": "#1F5C3D"
+    },
+    "fonts": { "display": "Fraunces", "body": "Inter" },
+    "radius": 0,
+    "mood": ["editorial", "autoral", "premium B2B", "terra-e-verde"]
+  },
+  "slides": [
+    {
+      "n": 1,
+      "archetype": "cover",
+      "fields": {
+        "kicker": "EXEMPLO · OPERAR O CANAL",
+        "title": "No agro, o digital|não substitui a relação —|ele {fortalece}.",
+        "subtitle": "Por que vender insumo online não tira o seu vendedor do jogo."
+      },
+      "image": {
+        "role": "background",
+        "prompt": "Bright editorial photograph: a fresh soybean seedling sprouting from red-brown Cerrado soil, soft Brazilian morning sunlight, vast soybean plantation behind, luminous optimistic, shallow depth of field.",
+        "negativePrompt": "text, words, letters, logos, watermark, ui",
+        "style": "authentic Brazilian agro editorial photograph",
+        "palette": ["#14342B", "#D98C3F", "#1F5C3D"],
+        "aspectRatio": "4:5"
+      }
+    },
+    {
+      "n": 2,
+      "archetype": "mirror",
+      "fields": {
+        "punchline": "Você adia o e-commerce com medo de|{esfriar} a relação e de errar no receituário.",
+        "aside": "(enquanto a indústria já vende direto pro seu produtor)"
+      },
+      "image": {
+        "role": "background",
+        "prompt": "Bright candid editorial photograph, full frame: two authentic Brazilian farmers shaking hands in a green soybean field, warm morning daylight, optimistic and human.",
+        "negativePrompt": "text, words, letters, logos, watermark",
+        "style": "authentic Brazilian agro editorial photograph",
+        "palette": ["#14342B", "#D98C3F", "#1F5C3D"],
+        "aspectRatio": "4:5"
+      }
+    },
+    {
+      "n": 3,
+      "archetype": "context",
+      "fields": {
+        "title": "A venda no agro virou {híbrida}",
+        "body": "O produtor pesquisa online|e fecha com quem confia.|A loja digital serve o cliente E o vendedor — não um no lugar do outro."
+      },
+      "image": {
+        "role": "background",
+        "prompt": "Bright editorial photograph: a soybean harvester working a vast Cerrado field at golden morning light, center-pivot irrigation in the distance, a smartphone on a fence post in the foreground.",
+        "negativePrompt": "text, words, letters, logos, watermark",
+        "style": "authentic Brazilian agro editorial photograph",
+        "palette": ["#14342B", "#D98C3F", "#1F5C3D"],
+        "aspectRatio": "4:5"
+      }
+    },
+    {
+      "n": 4,
+      "archetype": "stat",
+      "fields": {
+        "label": "PEDIDOS NO PRAZO",
+        "number": "98%",
+        "desc": "entregues no prazo|em todo o Brasil",
+        "sub": "a operação que sustenta a {recompra} — número ilustrativo"
+      },
+      "image": {
+        "role": "background",
+        "prompt": "Bright clean editorial infographic: a stylized map of Brazil in luminous fresh green relief with soft golden delivery routes connecting glowing nodes, airy light-green background, premium minimal data-viz.",
+        "negativePrompt": "text, words, letters, country labels, logos, watermark",
+        "style": "authentic Brazilian agro editorial photograph",
+        "palette": ["#14342B", "#D98C3F", "#1F5C3D"],
+        "aspectRatio": "4:5"
+      }
+    },
+    {
+      "n": 5,
+      "archetype": "quote",
+      "fields": {
+        "lead": "A real é simples:",
+        "quote": "Você não precisa virar empresa|de {tecnologia e logística}.|Precisa vender mais insumo."
+      },
+      "image": {
+        "role": "background",
+        "prompt": "Bright editorial macro photograph: the weathered hands of a Brazilian Cerrado farmer holding red-brown soil with green soybean sprouts, soft luminous daylight, hopeful.",
+        "negativePrompt": "text, words, letters, logos, watermark",
+        "style": "authentic Brazilian agro editorial photograph",
+        "palette": ["#14342B", "#D98C3F", "#1F5C3D"],
+        "aspectRatio": "4:5"
+      }
+    },
+    {
+      "n": 6,
+      "archetype": "cta",
+      "fields": {
+        "question": "Quanto a venda direta da indústria|já tirou da sua {revenda}?",
+        "ctaLabel": "Agende uma conversa",
+        "ctaMeta": "link na bio"
+      },
+      "image": {
+        "role": "background",
+        "prompt": "Bright aerial editorial photograph: a vast Brazilian Cerrado soybean farm with red dirt roads converging and green center-pivot circles, a pair of blue-and-yellow macaws flying over, golden morning light.",
+        "negativePrompt": "text, words, letters, logos, watermark",
+        "style": "authentic Brazilian agro editorial photograph",
+        "palette": ["#14342B", "#D98C3F", "#1F5C3D"],
+        "aspectRatio": "4:5"
+      }
+    }
+  ],
+  "caption": {
+    "instagram": "No agro, o digital não substitui relações — fortalece.\n\nA gente opera o e-commerce da sua revenda ou cooperativa de ponta a ponta — com receituário, RT e crédito resolvidos na loja — e plugga numa rede logística nacional.\n\nVocê vende mais insumo, atende o produtor distante e protege o canal — sem virar empresa de tecnologia e logística.\n\nA pergunta não é se o agro vai vender online. É quem vai operar isso por você.",
+    "linkedin": "A objeção número 1 da revenda de insumos sobre e-commerce é \"meu produtor não compra sem o agrônomo do lado\". Correto — e é por isso que digital no agro é MEIO, não fim: a loja organiza a venda e arma o time comercial, não o substitui. O canal não morre no digital; ele se fortalece."
+  },
+  "hashtags": ["#agro", "#agronegocio", "#insumos", "#fullcommerce", "#revenda", "#cooperativa"],
+  "cta": {
+    "label": "Agende uma conversa",
+    "meta": "link na bio"
+  }
+}

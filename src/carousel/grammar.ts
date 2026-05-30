@@ -1,7 +1,7 @@
 /**
  * Carousel grammar — the visual IP, generalized.
  *
- * The agrega-content-engine proved 6 fixed slide anatomies (capa, espelho,
+ * The o motor predecessor proved 6 fixed slide anatomies (capa, espelho,
  * checklist, stat, quote, cta). This file lifts that into a reusable registry
  * of slide ARCHETYPES plus NARRATIVE RECIPES (ordered archetype sequences for
  * common post shapes). The GENERATE stage picks a recipe and fills each

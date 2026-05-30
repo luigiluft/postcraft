@@ -57,14 +57,14 @@ No headless browser → runs on serverless. Brand consistency is deterministic, 
 
 ## The visual IP
 
-`carousel/grammar.ts` generalizes the agrega 6-anatomy system into:
+`carousel/grammar.ts` generalizes a predecessor 6-anatomy system into:
 - **Archetypes** (`cover`, `mirror`, `context`, `list`, `stat`, `step`, `comparison`, `quote`, `takeaway`, `cta`) — each with named text slots.
 - **Recipes** (`thesis`, `listicle`, `howto`, `case`, `comparison`) — ordered archetype sequences.
 - `describeGrammarForPrompt()` injects the grammar into the GENERATE prompt so the LLM emits slides that map 1:1 to layouts.
 
 ## Renderer gotcha (documented)
 
-satori-html mis-parses a truly-empty `<div></div>` (it inflates the parent's child count → "needs display:flex"). **Every decorative empty div must carry `display:flex`.** See `scripts/probe5.mjs`.
+satori-html mis-parses a truly-empty `<div></div>` (it inflates the parent's child count → "needs display:flex"). **Every decorative empty div must carry `display:flex`** — enforced globally by `fixEmptyDivs` in `renderer/satori.ts`.
 
 ## Extension points
 

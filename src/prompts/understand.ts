@@ -2,7 +2,7 @@
  * UNDERSTAND prompt — turns a raw company footprint into actionable
  * BrandIntelligence: positioning, voice, ICP(s), content pillars, proof assets.
  *
- * Encodes the hard-won rules from agrega-content-engine, generalized:
+ * Encodes the hard-won rules from o motor predecessor, generalized:
  *  - ICP "verbatim terms": the exact phrases the buyer types/searches.
  *  - Proof provenance classes — never fabricate a number; classify every claim.
  *  - The inform/entertain/prove value axis attached to each pillar.

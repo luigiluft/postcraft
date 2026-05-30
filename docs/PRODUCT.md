@@ -27,7 +27,7 @@ Two axes are weak across the **whole field**: real ICP targeting and per-slide c
 
 ## Who buys (wedge)
 
-**B2B agencies and B2B social/content marketers** — highest willingness to pay, run many brands, feel the carousel-craft pain acutely. Beachhead: **BR B2B commerce/distribution** (the Agrega vertical) where a Portuguese-first, ICP-aware tool has a real local opening before global players localize depth.
+**B2B agencies and B2B social/content marketers** — highest willingness to pay, run many brands, feel the carousel-craft pain acutely. Beachhead: **BR B2B commerce/distribution** (the BR B2B vertical) where a Portuguese-first, ICP-aware tool has a real local opening before global players localize depth.
 
 ## Pricing & packaging (recommendation)
 
@@ -40,7 +40,7 @@ Two axes are weak across the **whole field**: real ICP targeting and per-slide c
 
 ## 0→1 motion
 
-1. Dogfood on Agrega + 3–5 friendly BR B2B brands; publish the carousels, collect proof.
+1. Dogfood on your own brand + 3–5 friendly BR B2B brands; publish the carousels, collect proof.
 2. Wedge into agencies with a "1 brand free kit" demo (the engine already runs zero-key for the sample).
 3. Charge at the agency tier first (clearest ROI), expand down to in-house marketers.
 

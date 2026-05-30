@@ -13,7 +13,7 @@ Vender SaaS self-serve agora exige multi-tenant, billing, onboarding — semanas
 ## Quem compra (wedge)
 
 1. **Agências B2B / social** — maior disposição a pagar, rodam várias marcas, sentem a dor de "carrossel genérico" na pele. **Alvo primário.** Vende white-label.
-2. **Indústrias/distribuidores B2B BR** (ecossistema Agrega/Luft) — já no teu network, ICP nítido, frete/margem/operação como pauta.
+2. **Indústrias/distribuidores B2B BR** (seu network B2B) — já no teu network, ICP nítido, frete/margem/operação como pauta.
 3. **Founders D2C/SaaS em escala** — querem presença sem montar time de conteúdo.
 
 Comece pelo (1) e (2): é onde você tem rede e prova.
@@ -35,7 +35,7 @@ Margem: custo de API por kit é de centavos a poucos reais (ver `docs/OPERATING.
 
 O fechamento é o **carrossel de teste grátis** — ele prova a qualidade antes de qualquer pitch.
 
-1. **Prospecção.** Liste 20 alvos/semana: marcas do ecossistema Agrega, agências B2B, indústrias que postam mal no IG/LinkedIn. Sinais de compra: postam pouco/genérico, têm site bom mas feed fraco, lançaram algo recente.
+1. **Prospecção.** Liste 20 alvos/semana: marcas do ecossistema B2B, agências B2B, indústrias que postam mal no IG/LinkedIn. Sinais de compra: postam pouco/genérico, têm site bom mas feed fraco, lançaram algo recente.
 2. **Abordagem (DM/e-mail).** Oferta única: "manda o domínio, devolvo 1 carrossel na tua marca em 48h, sem custo". Script abaixo.
 3. **Rodar o motor.** Pegou o domínio → rode o pipeline (`docs/OPERATING.md`). Em modo live (keys) ou, se faltar key, harvest manual + motor. Saída em <48h.
 4. **Entregar o teaser.** Mande os 6 slides + a tese do ICP por trás ("é isso que o teu comprador quer ler porque..."). O teaser JÁ demonstra a inteligência, não só a arte.
@@ -67,7 +67,7 @@ O fechamento é o **carrossel de teste grátis** — ele prova a qualidade antes
 - **Outbound founder-led** (DM/e-mail) — principal no 0→1.
 - **LinkedIn orgânico** — poste os próprios carrosséis da Postcraft (dogfooding = prova viva).
 - **Landing** (`landing/index.html`) — asset de conversão; CTA = e-mail do teaser.
-- **Network Agrega/Luft** — primeiros casos.
+- **Network B2B próprio** — primeiros casos.
 
 ## Métricas (semanais)
 

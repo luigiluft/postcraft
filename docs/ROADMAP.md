@@ -10,8 +10,8 @@
 
 ## v0.2 — Real output you'd trust (validate live)
 - [ ] Verify each live adapter against current provider docs; add a 10-item Apify pilot gate.
-- [ ] Run on 5 real brands (incl. an Agrega vertical) end-to-end with keys.
-- [ ] **Quality gates** (port from agrega-content-engine):
+- [ ] Run on 5 real brands (incl. an vertical B2B BR) end-to-end with keys.
+- [ ] **Quality gates** (port from o motor predecessor):
   - fact-check gate (proof provenance enforced before a number ships),
   - text-only dry-run preview (render copy before paying for images),
   - optional human approve hook between stages.

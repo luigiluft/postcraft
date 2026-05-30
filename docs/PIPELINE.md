@@ -57,4 +57,4 @@ runs/<brand>_<ts>/
 
 ## Where the human gates go (roadmap)
 
-The agrega engine proved 3 human gates (angle+stat → drop written → IG package). In Postcraft these become optional `approve` hooks between stages — see `docs/ROADMAP.md`. Fact-checking lives at UNDERSTAND (proof classification) and is re-asserted at GENERATE (no number without a proof asset).
+The predecessor engine proved 3 human gates (angle+stat → drop written → IG package). In Postcraft these become optional `approve` hooks between stages — see `docs/ROADMAP.md`. Fact-checking lives at UNDERSTAND (proof classification) and is re-asserted at GENERATE (no number without a proof asset).

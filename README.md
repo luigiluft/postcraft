@@ -31,7 +31,7 @@ A Postcraft lê **tudo que a empresa já comunica** — site, notícias, redes, 
 
 ## 🎬 Veja funcionando — saída real
 
-Gerado de ponta a ponta para a **Campo Vivo** (full-commerce do agronegócio): site real → ICP → concorrentes → carrossel. A IA faz o **fundo**; uma camada determinística desenha o **texto + logo** (sempre nítido).
+Gerado de ponta a ponta para a **Campo Vivo**, uma marca fictícia de exemplo (full-commerce do agronegócio): do site → ICP → concorrentes → carrossel. A IA faz o **fundo**; uma camada determinística desenha o **texto** (sempre nítido).
 
 <p align="center">
   <img src="docs/samples/example-1.png" width="23%" />

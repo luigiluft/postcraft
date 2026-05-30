@@ -173,9 +173,9 @@
   <div class="navlinks">
     <a href="#como">Como funciona</a>
     <a href="#exemplos">Exemplos</a>
-    <a href="#precos">Preços</a>
+    <a href="#instalar">Instalar</a>
     <a href="https://github.com/luigiluft/postcraft">GitHub ↗</a>
-    <a class="btn btn-primary" href="#cta">Carrossel de teste</a>
+    <a class="btn btn-primary" href="https://github.com/luigiluft/postcraft">Instalar grátis</a>
   </div>
 </div></nav>
 
@@ -186,10 +186,10 @@
       <h1>O conteúdo que o seu comprador <em>quer ver</em>, gerado a partir de tudo que a sua empresa já é.</h1>
       <p class="lede">A Postcraft lê o site, as notícias, as redes e a marca da sua empresa, entende o que o seu comprador quer ler, estuda os concorrentes — e entrega carrosséis prontos pra postar. Sem template genérico.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="#cta">Quero um carrossel de teste →</a>
+        <a class="btn btn-primary" href="https://github.com/luigiluft/postcraft">Instalar no Claude Code →</a>
         <a class="btn btn-ghost" href="#como">Ver como funciona</a>
       </div>
-      <p class="micro">🌱 Motor <b>grátis e open-source</b> — <a href="https://github.com/luigiluft/postcraft" style="color:var(--accent);font-weight:600">instale no Claude Code</a>. Ou manda o domínio que a gente devolve 1 carrossel em 48h.</p>
+      <p class="micro">🌱 <b>Grátis e open-source</b> (MIT). Clona, instala como skill no Claude Code e gera os seus carrosséis — sem conta, sem cobrança.</p>
     </div>
     <div class="hero-shots">
       <img src="assets/sample-mirror.png" alt="Slide gerado pela Postcraft" />
@@ -202,7 +202,7 @@
 <div class="strip"><div class="wrap">
   <div><div class="n">4 fontes</div><div class="l">site · notícias · redes · concorrentes</div></div>
   <div><div class="n">5 etapas</div><div class="l">do domínio ao carrossel pronto</div></div>
-  <div><div class="n">&lt; 48h</div><div class="l">do briefing ao primeiro post</div></div>
+  <div><div class="n">MIT</div><div class="l">grátis e open-source</div></div>
   <div><div class="n">1080×1350</div><div class="l">texto sempre legível</div></div>
 </div></div>
 
@@ -345,45 +345,24 @@
   <p class="note">Fundos por IA (Higgsfield); texto e logo nítidos por uma camada determinística (Satori → PNG). Mesma identidade nos 6 slides, cada um com função distinta.</p>
 </div></section>
 
-<!-- pricing -->
-<section id="precos"><div class="wrap">
-  <div class="kicker eyebrow">Planos</div>
-  <h2>Comece com um diagnóstico. Escale quando a operação fizer sentido.</h2>
-  <p class="sub">Valores em reais, cobrança via Pix ou cartão. Sem fidelidade nos planos mensais.</p>
-  <div class="tiers">
-    <div class="tier">
-      <div class="badge">Starter</div>
-      <h3>Uma marca, ritmo enxuto</h3>
-      <div class="price">R$ 1.490<small> /mês</small></div>
-      <div class="perpost">8 carrosséis/mês · ~R$ 186 por post</div>
-      <ul><li>1 marca</li><li>8 posts (carrosséis + legendas)</li><li>ICP + playbook visual</li><li>1 rodada de ajustes</li></ul>
-      <a class="btn btn-ghost" href="#cta">Começar</a>
-    </div>
-    <div class="tier feature">
-      <div class="badge">Studio · mais escolhido</div>
-      <h3>Operação de conteúdo completa</h3>
-      <div class="price">R$ 2.990<small> /mês</small></div>
-      <div class="perpost">20 carrosséis/mês · ~R$ 150 por post</div>
-      <ul><li>1 marca</li><li>20 posts/mês</li><li>Pesquisa de concorrentes contínua</li><li>Calendário + 2 rodadas</li><li>Legendas IG + LinkedIn</li></ul>
-      <a class="btn btn-primary" href="#cta">Falar agora</a>
-    </div>
-    <div class="tier">
-      <div class="badge">Agência · White-label</div>
-      <h3>Várias marcas, sua marca na frente</h3>
-      <div class="price">a partir de<br>R$ 6.000<small> /mês</small></div>
-      <div class="perpost">volume sob medida</div>
-      <ul><li>Múltiplas marcas</li><li>Entrega white-label</li><li>Fluxo de aprovação</li><li>Prioridade</li></ul>
-      <a class="btn btn-ghost" href="#cta">Pedir proposta</a>
-    </div>
+<!-- instalar -->
+<section id="instalar"><div class="wrap">
+  <div class="kicker eyebrow">Grátis &amp; open-source</div>
+  <h2>Instale no Claude Code em 1 minuto.</h2>
+  <p class="sub">Clona o repo, copia a skill e usa em linguagem natural. Sem conta, sem cobrança — licença MIT.</p>
+  <pre style="background:var(--dark);color:#F4F1EA;padding:24px 26px;border-radius:14px;overflow:auto;font-size:14px;line-height:1.8;margin-top:32px;box-shadow:var(--shadow)"><code># 1) clone e instale o motor
+git clone https://github.com/luigiluft/postcraft
+cd postcraft &amp;&amp; npm install
+
+# 2) instale a skill no Claude Code
+cp -r skills/postcraft ~/.claude/skills/postcraft
+
+# 3) no Claude Code:  <span style="color:#E8643C">postcraft &lt;a sua empresa&gt;</span></code></pre>
+  <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
+    <a class="btn btn-primary" href="https://github.com/luigiluft/postcraft">Ver no GitHub ↗</a>
+    <a class="btn btn-ghost" href="#como">Como funciona</a>
   </div>
-  <div class="tripwire">
-    <div>
-      <div class="kicker">Porta de entrada</div>
-      <h3 class="serif" style="font-size:22px;margin-top:6px">Diagnóstico ICP + Playbook Visual — R$ 990 (uma vez)</h3>
-      <p class="muted" style="font-size:14.5px;margin-top:6px;max-width:640px">Inteligência da sua empresa, ICP editável, playbook visual e 2 carrosséis de amostra. Abatido no 1º mês se virar plano.</p>
-    </div>
-    <a class="btn btn-primary" href="#cta">Quero o diagnóstico</a>
-  </div>
+  <p class="note" style="margin-top:18px">No modo skill, o próprio Claude faz a inteligência — você <b>não precisa de API key</b>. As keys de Firecrawl/Higgsfield ficam nas suas MCPs. Quer só testar? <code>npm run demo</code> roda offline.</p>
 </div></section>
 
 <!-- faq -->
@@ -391,20 +370,20 @@
   <div class="kicker eyebrow">Dúvidas</div>
   <h2>Perguntas frequentes</h2>
   <div style="margin-top:28px">
-    <details open><summary>Vocês inventam números sobre a minha empresa?</summary><p>Nunca. Todo dado é classificado pela origem (verificável publicamente, interno anonimizado ou ilustrativo). Número sem prova real não entra na peça sob a voz da marca.</p></details>
-    <details><summary>Como é o teste gratuito?</summary><p>Você manda o domínio e os perfis. A gente roda o motor e devolve 1 carrossel na sua marca em até 48h, com o ICP e a tese por trás. Sem compromisso.</p></details>
-    <details><summary>Funciona pra qualquer segmento?</summary><p>O foco é B2B (comércio, distribuição, SaaS, serviços) — onde o ICP é mais nítido e o carrossel converte melhor. Outros segmentos sob conversa.</p></details>
-    <details><summary>Eu posto ou vocês postam?</summary><p>Entregamos pronto pra postar (PNG 1080×1350 + legendas IG/LinkedIn + hashtags). Agendamento entra no plano Studio em diante.</p></details>
-    <details><summary>O texto da imagem sai borrado como em outras IAs?</summary><p>Não. A IA gera só a textura de fundo; o texto é desenhado por uma camada determinística — sempre nítido e no padrão tipográfico da marca.</p></details>
+    <details open><summary>Preciso de API key?</summary><p>No modo skill do Claude Code, <b>não</b> — o próprio Claude faz a inteligência e as suas MCPs (Firecrawl, Higgsfield) cuidam da coleta e dos fundos. Só o modo CLI automático usa keys no <code>.env</code>.</p></details>
+    <details><summary>É grátis mesmo? Posso usar comercialmente?</summary><p>Sim. Licença MIT — use, forke, melhore e até cobre dos seus clientes se quiser.</p></details>
+    <details><summary>Funciona offline?</summary><p><code>npm run demo</code> gera carrosséis de exemplo 100% offline (marca fictícia). Pra empresas reais, conecta as MCPs no Claude Code.</p></details>
+    <details><summary>Inventa números sobre a empresa?</summary><p>Não. Todo dado é classificado pela origem (verificável, interno anonimizado ou ilustrativo). Número sem prova real não entra na peça.</p></details>
+    <details><summary>O texto da imagem sai borrado como em outras IAs?</summary><p>Não. A IA gera só a textura de fundo; o texto e o logo são desenhados por uma camada determinística — sempre nítidos.</p></details>
   </div>
 </div></section>
 
 <!-- final -->
 <section class="final" id="cta"><div class="wrap">
-  <div class="kicker eyebrow" style="text-align:center">Comece agora</div>
-  <h2>Manda o domínio da sua empresa.<br>A gente devolve um carrossel.</h2>
-  <p class="sub">Teste sem custo, sem cadastro. Você vê a qualidade antes de decidir qualquer coisa.</p>
-  <a class="btn btn-primary" href="mailto:luigi@luft.com.br?subject=Quero%20um%20carrossel%20de%20teste%20Postcraft&body=Empresa:%0AD%C3%ADnio:%0AInstagram/LinkedIn:%0AConcorrentes:%0AObjetivo:">Quero meu carrossel de teste →</a>
+  <div class="kicker eyebrow" style="text-align:center">Grátis &amp; open-source</div>
+  <h2>Clona, instala no Claude Code<br>e gera os seus carrosséis.</h2>
+  <p class="sub">Sem conta, sem cobrança. Licença MIT — pros teus amigos usarem também. 🌱</p>
+  <a class="btn btn-primary" href="https://github.com/luigiluft/postcraft">Ver no GitHub ↗</a>
 </div></section>
 
 <footer><div class="wrap">

@@ -9,6 +9,7 @@ Orquestra o pipeline da Postcraft usando as ferramentas MCP do usuário (Firecra
 
 ## Pré-requisitos (uma vez)
 - Repo clonado e `npm install` feito. Defina o caminho: `POSTCRAFT_DIR` (ex.: `~/postcraft`). Se não setado, pergunte ao usuário onde clonou.
+- **Sem API key:** você (Claude) faz a inteligência/pesquisa/geração na própria conversa — **não precisa de `ANTHROPIC_API_KEY`**. As keys de Firecrawl/Apify/Higgsfield ficam na config das MCPs do Claude Code, não no `.env`.
 - MCP úteis (degrada com elegância se faltar): **Firecrawl** (site/notícias/marca), **Apify** (redes), **Higgsfield** ou **fal** (fundos). Sem nenhum, dá pra rodar com `npm run demo` (dados de exemplo).
 
 ## Entrada

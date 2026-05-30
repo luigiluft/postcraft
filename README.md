@@ -83,22 +83,24 @@ A skill vive em [`skills/postcraft/SKILL.md`](skills/postcraft/SKILL.md). Contra
 - **regras:** prova classificada (nunca inventa número), texto nunca dentro da imagem, logo sempre nítido, imagem autêntica ao contexto.
 - lê `.env` / pergunta as keys; degrada com elegância se faltar MCP.
 
-## ⚙️ Configuração (`.env`)
+## ⚙️ Configuração — dois modos
 
-Cada etapa usa o provider quando a key existe, senão cai no **fixture** (zero key). Copie e preencha:
+**🧩 Modo skill (Claude Code) — recomendado:** **não precisa de `.env` nem de `ANTHROPIC_API_KEY`.** O próprio Claude faz a inteligência / pesquisa / geração na conversa; a coleta e os fundos usam as suas **MCPs** (Firecrawl, Apify, Higgsfield) já configuradas no Claude Code (a chave vive na MCP, não aqui); o render roda local (só Node). Zero chave do motor.
+
+**⌨️ Modo CLI / automático (sem Claude no loop):** aí o motor chama as APIs sozinho — copie `.env.example` → `.env` e preencha:
 
 ```bash
 cp .env.example .env
 ```
 
-| Variável | Habilita |
+| Variável | Habilita (só no modo CLI) |
 |---|---|
 | `ANTHROPIC_API_KEY` | inteligência · pesquisa · geração |
 | `FIRECRAWL_API_KEY` | coleta (site · notícias · marca/logo) |
 | `APIFY_TOKEN` | coleta (redes sociais) |
 | `FAL_KEY` ou `IDEOGRAM_API_KEY` | fundos por IA |
 
-> Nunca comite segredos — `.env` está no `.gitignore`.
+Sem key, cada etapa cai no **fixture** (`npm run demo` roda 100% offline). Nunca comite segredos — `.env` está no `.gitignore`.
 
 ## 🚀 Começo rápido
 
@@ -150,4 +152,4 @@ MIT © Luigi Luft — use, forke, melhore. Veja [LICENSE](LICENSE).
 
 ---
 
-<p align="center"><i>Prefere que façam por você? Tem a opção done-for-you no <a href="https://luigiluft.github.io/postcraft-site/">site</a>.</i></p>
+<p align="center"><i>🌱 Grátis e open-source. Forke, use na sua empresa, melhore — e mostra pros amigos.</i></p>
